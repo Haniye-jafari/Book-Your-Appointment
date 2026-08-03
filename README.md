@@ -1,16 +1,48 @@
-# React + Vite
+# Book Your Appointment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Your Appointment is a React + Vite-based healthcare web app that currently focuses on a polished landing experience, authentication flow, and role-based dashboard routes for patients and doctors.
 
-Currently, two official plugins are available:
+## Current Features
+- Modern homepage banner with a typewriter-style hero text
+- Responsive navigation and layouts
+- Login and registration pages
+- Appointment page
+- About us page
+- Learn more page
+- Patient dashboard route
+- Doctor dashboard route
+- Custom styling with CSS Modules
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- React
+- Vite
+- React Router DOM
+- CSS Modules
+- react-simple-typewriter
+- @fontsource/inter
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Install dependencies
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+### Run the app locally
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Build for production
+```bash
+npm run build
+```
+
+## Project Structure
+- src/pages: main page components such as Home, About Us, Appointment, Learn More, and dashboards
+- src/layouts: shared layouts including main, auth, dashboard, and banner sections
+- src/contexts: authentication context and auth-related UI
+- src/utils: helper utilities
+
+## Notes
+This project is still in its early stage and is being expanded over time. As new features are added, this README can be updated to reflect the latest state of the application.
