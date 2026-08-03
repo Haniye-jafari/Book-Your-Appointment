@@ -1,0 +1,29 @@
+.navbar {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbe8f5;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.Stethoscope {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  background-color: #dbe8f5;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.li {
+  margin: 10px;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #1f2937;
+}

@@ -1,0 +1,60 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.passwordMeter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.barWrapper {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+.passwordHint {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.submitButton {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+}

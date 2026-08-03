@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+    color: #475569;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.HealthCare{
+
+  height: 100px;
+  width: 98%;
+   margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 0;
+  border-radius: 12px;
+  color: #1f2937;
+  background-color: #dbe8f5;
+   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.15);
+  transition: all 0.55s ease;
+   
+}
+
+.HealthCare h1{
+font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.HealthCare p{
+font-size: 14px;
+  color: #475569;
+  max-width: 700px; 
+  text-align: justify;
+}
+.Services{
+   margin-left: 12px;
+   margin-right: 12px;
+   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ServiceCard {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 12px;
+  flex: 1 1 250px;
+  min-width: 220px;
+  padding: 18px;
+  background: #fefefe;
+  border-radius: 15px;
+  opacity: 1;
+  
+  box-shadow: 4px 10px 22px rgba(15, 23, 42, 0.14);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.ServiceCard h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 12px;
+}
+
+.ServiceCard p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.ServiceCard img {
+  width: 100%;
+  height: 200px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.ServiceCard:hover {
+  transform: translateY(-6px);
+  background-color: #dbe8f5;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.00), 6px 16px 34px rgba(15, 23, 42, 0.18);
+}
+
+.ServiceCard:hover img {
+  transform: scale(1.02);
+}
+.ServiceCard:hover img h1 p {
+  filter: brightness(0.8);
+}
+
+.InsuranceSupport {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  margin: 20px auto 0;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 4px 10px 22px rgba(15, 23, 42, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.InsuranceSupport h1 {
+  font-size: 20px;
+  font-weight: 700;
+   color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.InsuranceSupport p {
+  color: #475569;
+  line-height: 1.6;
+  
+}
+.InsuranceSupport img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+.InsuranceSupport:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 16px 34px rgba(15, 23, 42, 0.18);
+}
+.AdditionalInfo {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  margin-top: 30px;
+  
+}
+.AdditionalInfoCard {
+  position: absolute;
+ left: 45%;
+top: auto;
+ 
+  width: 50%;
+  height: 50%;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  flex: 1 1 250px;
+  min-width: 220px;
+  padding: 18px;
+  background: #fefefe;
+  border-radius: 15px;
+  opacity: 0;
+  box-shadow: 4px 10px 22px rgba(15, 23, 42, 0.14);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+   z-index: 1;
+}
+.AdditionalInfoCard.active {
+opacity: 1;
+ z-index: 2;
+}
+
+.AdditionalInfo h1 {
+   font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.AdditionalInfo p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.AdditionalInfoImg img {
+  width: 500px;
+  height: 600px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 6px 16px 34px rgba(15, 23, 42, 0.18);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+
+
+.AdditionalInfo > div:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.02);
+}
+.buttonContainer{
+  position: absolute;
+  left: 67%;
+  top: 53%;
+  margin: 20px;
+}
+.controls{
+  color: #475569;
+border: none;
+background-color: transparent;
+margin-right: 25px;
+gap: 20px;
+ 
+}
+
+
+.sticker{
+width: 420px;
+margin-top: 3%;
+margin-left: 65px;
+}

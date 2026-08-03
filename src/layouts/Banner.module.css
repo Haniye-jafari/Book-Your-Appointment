@@ -1,0 +1,65 @@
+.Banner{
+     position: relative;
+     width: 99%;
+     height: 200%;
+     margin-left: 12px;
+}
+.img{
+    height: auto;
+    border-radius: 12px;
+    max-width: 99%;
+}
+.Appointment a{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #dbe8f5;
+    border-radius: 12px;
+     font-size: 15px;
+    padding: 20px 22px;
+    text-decoration: none;
+     color: #1f2937;
+}
+.Appointment :hover{
+    background-color: #c6e0f5;
+    color: #1f2937;
+    cursor: pointer;
+}
+.TypewriterWrapper{
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+   width: 50%;
+   
+}
+
+.TypewriterWrapper span{
+    font-size: 24px;
+    font-weight: 500;
+    color: #1f2937;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.LearnMore{
+ position: absolute;
+ top: 80%;
+ left: 17%;
+ 
+}
+.LearnMore a{
+    color: #1f2937;
+    text-decoration: none;
+}
+.svg{
+    position: absolute;
+    top: 85%;
+    left: 20%;
+      width: 18px;
+     height: 18px;
+      stroke:  #1f2937;
+}
