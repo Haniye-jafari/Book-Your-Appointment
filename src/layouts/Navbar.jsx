@@ -11,23 +11,35 @@ function Navbar() {
   const handleRegister = () => navigate('/register');
   const handleDashboard = () => navigate('/patient/dashboard');
 
+
   return (
     <nav className="navbar">
       <div className={styles.navbar}>
         <StethoscopeIcon className={styles.Stethoscope} />
-        <li className={styles.li}><NavLink to="/" className={styles.link}>Home</NavLink></li>
-        <li className={styles.li}><NavLink to="/about-us" className={styles.link}>About Us</NavLink></li>
-        <li className={styles.li}><NavLink to="/blog" className={styles.link}>Blog</NavLink></li>
+        <div className={styles.link}>
+          <li className={styles.li}>
+          <NavLink to="/" className={styles.Home}>Home</NavLink>
+          </li>
+        <li className={styles.li}>
+          <NavLink to="/about-us" className={styles.AboutUs}>About Us</NavLink>
+          </li>
+          <li  className={styles.li}> 
+          <NavLink to="/services"  className={styles.Services}>Services</NavLink>
+          </li>
+        <li className={styles.li}>
+          <NavLink to="/blog" className={styles.Blog}>Blog</NavLink>
+          </li>
+        </div>
 
         {authStatus === 'guest' ? (
           <>
-            <button type="button" onClick={handleLogin}>Login</button>
-            <button type="button" onClick={handleRegister}>Register</button>
+            <button type="button" onClick={handleLogin} className={styles.Login}>Login</button>
+            <button type="button" onClick={handleRegister}  className={styles.Register}>Register</button>
           </>
         ) : (
           <>
-            <button type="button" onClick={handleDashboard}>Dashboard</button>
-            <button type="button" onClick={logout}>Logout</button>
+            <button type="button" onClick={handleDashboard}  className={styles.Dashboard}>Dashboard</button>
+            <button type="button" onClick={logout}  className={styles.Logout}>Logout</button>
           </>
         ) 
         } 

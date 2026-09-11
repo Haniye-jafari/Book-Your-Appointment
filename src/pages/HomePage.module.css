@@ -1,3 +1,7 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +12,8 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+
 .HealthCare{
 
   height: 100px;
@@ -203,6 +209,7 @@ opacity: 1;
   left: 67%;
   top: 53%;
   margin: 20px;
+  
 }
 .controls{
   color: #475569;
@@ -210,12 +217,109 @@ border: none;
 background-color: transparent;
 margin-right: 25px;
 gap: 20px;
+ transition: all 0.3s ease;
  
 }
 
+.controls:hover svg{
+   stroke:  #fcf0cc;
+  fill: #ffd700; 
+  filter: drop-shadow(0 0 6px #ffd700)
+          drop-shadow(0 0 12px #ffea8a)
+          drop-shadow(0 0 20px #ffdd55);
 
+}
 .sticker{
 width: 420px;
 margin-top: 3%;
 margin-left: 65px;
+}
+@media (max-width: 480px) {
+.HealthCare {
+display: none;
+  }
+
+  .Services {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ServiceCard {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .AdditionalInfo {
+    height: auto;
+  }
+
+  .AdditionalInfoCard {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .buttonContainer {
+    left: 50%;
+    top: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+  .sticker {
+   display: none;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .HealthCare {
+display: none;
+  }
+
+  .Services {
+    justify-content: center;
+  }
+
+  .ServiceCard {
+    flex: 1 1 45%;
+  }
+
+  .AdditionalInfoCard {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .buttonContainer {
+    left: 60%;
+  }
+
+  .sticker {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .ServiceCard {
+    flex: 1 1 30%;
+  }
+
+  .AdditionalInfoCard {
+    width: 50%;
+  }
+
+  .buttonContainer {
+    left: 65%;
+  }
+}
+@media (min-width: 1440px) {
+  .HealthCare,
+  .Services,
+  .InsuranceSupport,
+  .AdditionalInfo {
+    max-width: 1400px;
+    margin: auto;
+  }
 }

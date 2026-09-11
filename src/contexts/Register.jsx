@@ -101,9 +101,11 @@ function Register() {
     }
 
     const newUser = {
+      id: normalizedUsername,
       email: trimmedEmail,
       username: trimmedUsername,
       password,
+      appointments: [],
     };
 
     const updatedUsers = [...safeUsers, newUser];
@@ -112,15 +114,19 @@ function Register() {
   };
 
   return (
+    <>
+    
+    <div className={styles.page}>
     <form className={styles.form} onSubmit={handleRegister}>
-      <input className={styles.input} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input className={styles.input} type="text" placeholder="Username" value={username} onChange={(e) => {
+      <p className={styles.textRegister}>Register Form</p>
+      <input className={styles.inputRegister} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input className={styles.inputRegister} type="text" placeholder="Username" value={username} onChange={(e) => {
         setUsername(e.target.value);
         validateUsername(e.target.value);
       }} />
       {usernameError && <p className={styles.error}>{usernameError}</p>}
 
-      <input className={styles.input} type="password" placeholder="Password" value={password} onChange={(e) => handlePasswordChange(e.target.value)} />
+      <input className={styles.inputRegister} type="password" placeholder="Password" value={password} onChange={(e) => handlePasswordChange(e.target.value)} />
       {password && (
         <div className={styles.passwordMeter}>
           <div className={styles.barWrapper}>
@@ -133,11 +139,16 @@ function Register() {
         </div>
       )}
 
-      <input className={styles.input} type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+      <input className={styles.inputRegister} type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
       {error && <p className={styles.error}>{error}</p>}
       <button className={styles.submitButton} type="submit">Register</button>
       <Link className={styles.link} to="/login">Already have an account?</Link>
     </form>
+    
+      
+    </div>
+    
+     </>
   );
 }
 

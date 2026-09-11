@@ -33,10 +33,10 @@ function Banner() {
       </div>
       <div className={Styles.Appointment}>
         <a href="/appointments">
-         
-          Book Your Appointment</a>
-         
+          <p>Book Your Appointment</p>
+        </a>
       </div>
+          
      <div>
       <p className={Styles.LearnMore}>
         <Link to="/LearnMore">Learn More</Link>

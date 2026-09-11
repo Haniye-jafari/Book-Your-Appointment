@@ -1,0 +1,78 @@
+.calendarContainer {
+  min-width: 0;
+}
+
+.calendarContainer :global(.react-calendar) {
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  background: transparent;
+}
+
+.calendarContainer :global(.react-calendar__navigation) {
+  height: 46px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #dbe8f5;
+}
+
+.calendarContainer :global(.react-calendar__navigation button) {
+  min-width: 42px;
+  border-radius: 12px;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.calendarContainer :global(.react-calendar__navigation button:hover),
+.calendarContainer :global(.react-calendar__navigation button:enabled:focus) {
+  background: #bfdbfe;
+}
+
+.calendarContainer :global(.react-calendar__month-view__weekdays) {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calendarContainer :global(.react-calendar__tile) {
+  min-height: 42px;
+  border-radius: 12px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.calendarContainer :global(.react-calendar__tile:hover),
+.calendarContainer :global(.react-calendar__tile:enabled:focus) {
+  background: #eaf3ff;
+  color: #1d4ed8;
+}
+
+.calendarContainer :global(.react-calendar__tile--now) {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.calendarContainer :global(.react-calendar__tile--active),
+.calendarContainer :global(.react-calendar__tile--active:hover),
+.calendarContainer :global(.react-calendar__tile--active:enabled:focus) {
+  background: #bfdbfe;
+  color: #1e3a8a;
+  box-shadow: inset 0 0 0 2px #93c5fd;
+}
+
+.calendarContainer :global(.react-calendar__month-view__days__day--weekend) {
+  color: #2563eb;
+}
+
+.calendarContainer :global(.react-calendar__month-view__days__day--neighboringMonth) {
+  color: #a0aec0;
+}
+
+.calendarContainer > p {
+  margin: 12px 0 0;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

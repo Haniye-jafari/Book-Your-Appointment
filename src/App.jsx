@@ -17,18 +17,25 @@ import HomePage from './pages/HomePage';
 import PrivateRoute from './PrivateRoute';
 import Blog from './pages/Blog';
 import LearnMore from './pages/LearnMore';
+import Services from './pages/Services';
+import { getCurrentUser, saveCurrentUser } from './utils/auth';
+
 function App() {
-  const [authStatus, setAuthStatus] = useState('guest');
-  const [user, setUser] = useState(null);
+  const storedUser = getCurrentUser();
+  const [authStatus, setAuthStatus] = useState(storedUser ? 'loggedIn' : 'guest');
+  const [user, setUser] = useState(storedUser || null);
 
   const login = (userData) => {
-    setUser(userData);
+    const safeUser = userData ? { ...userData } : null;
+    setUser(safeUser);
     setAuthStatus('loggedIn');
+    saveCurrentUser(safeUser);
   };
 
   const logout = () => {
     setUser(null);
     setAuthStatus('guest');
+    saveCurrentUser(null);
   };
 
   return (
@@ -37,6 +44,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/blog"  element={<Blog/>} />
           <Route path="/appointments" element={<AppointmentPage />} />
           <Route path="/LearnMore" element={<LearnMore />} />

@@ -1,0 +1,45 @@
+.timePickerContainer {
+  min-width: 0;
+}
+
+.timePickerTitle {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.timeInfo {
+  margin: 0 0 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.timeButton {
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 12px;
+  padding: 10px 8px;
+  background: #f8fbff;
+  color: #1d4ed8;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.timeButton:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  background: #eaf3ff;
+}
+
+.selectedTime {
+  border-color: #60a5fa;
+  background: #bfdbfe;
+  color: #1e3a8a;
+}

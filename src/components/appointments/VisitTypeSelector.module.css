@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.selectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 360px;
+  background: #fefefe;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 4px 10px 22px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+.optionCard:hover {
+  transform: translateY(-6px);
+  background-color: #dbe8f5;
+  box-shadow: 6px 16px 34px rgba(15, 23, 42, 0.18);
+}
+
+.optionImageWrap {
+  width: calc(100% - 8px);
+  height: 248px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f8fbff 0%, #ebf4ff 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  overflow: hidden;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.optionImage {
+  display: block;
+  width: 1500px;
+  height: 1200px;
+  max-width: 260px;
+  max-height: 210px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.optionCard:hover .optionImage {
+  transform: scale(1.04);
+}
+
+.optionLabel {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #0f172a;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .selectionGrid {
+    grid-template-columns: 1fr;
+  }
+}

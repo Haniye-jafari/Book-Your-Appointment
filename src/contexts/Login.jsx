@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUsers } from '../utils/auth.js';
-
+import styles from "../layouts/Login.module.css"
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -34,33 +34,42 @@ function Login({ onLogin }) {
     }
 
     if (onLogin) {
-      onLogin({ username: foundUser.username, password });
-      navigate('/');
+      onLogin({
+        id: foundUser.id || foundUser.username,
+        username: foundUser.username,
+        email: foundUser.email,
+        password: foundUser.password,
+      });
+      navigate('/patient/dashboard');
     }
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <div>
+    <div className={styles.page}>
+      <form onSubmit={handleLogin} className={styles.form} >
+        <p className={styles.textLogin}>Login Form</p>
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className={styles.inputLogin}
         />
-      </div>
-      <div>
+      
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className={styles.inputLogin}
         />
-      </div>
+     
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <button type="submit">Login</button>
+      <button type="submit" className={styles.submitButton}>Login</button>
     </form>
+    </div>
+    
   );
 }
 

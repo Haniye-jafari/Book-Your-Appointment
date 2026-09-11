@@ -1,0 +1,180 @@
+.page {
+  min-height: calc(100vh - 80px);
+  padding: 28px 24px 36px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  color: #0f172a;
+}
+
+.dashboardCard {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 26px;
+  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.12);
+}
+
+.sidebar {
+  background: #eaf4ff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #475569;
+  line-height: 1.75;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menuItem {
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.menuItem:hover {
+  background: #9eceff;
+}
+
+.active {
+  background: #2563eb;
+  color: #f8fbff;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.18);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contentHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.contentText {
+  flex: 1;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.panelTitle {
+  font-size: 1.14rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.itemList {
+  display: grid;
+  gap: 14px;
+}
+
+.itemCard {
+  padding: 16px 18px;
+  background: #f8fbff;
+  border-radius: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  color: #334155;
+}
+
+.itemCard strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.logoutNote {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.logoutButton {
+  margin-top: 16px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .dashboardCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 20px 16px 28px;
+  }
+
+  .dashboardCard {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .sidebar {
+    padding: 20px;
+  }
+
+  .menuItem {
+    padding: 13px 16px;
+  }
+
+  .content {
+    gap: 18px;
+  }
+}

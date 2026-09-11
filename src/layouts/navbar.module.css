@@ -6,24 +6,139 @@
   background-color: #dbe8f5;
   border-radius: 15px;
   margin: 5px;
-  padding: 2px;
+  padding: 10px;
 }
 
 .Stethoscope {
   display: flex;
   align-items: center;
-  margin-right: 16px;
   background-color: #dbe8f5;
   border-radius: 5px;
   padding: 4px;
 }
 
 .li {
-  margin: 10px;
+  margin: 5px;
   list-style-type: none;
 }
 
 .link {
+   display: flex;
   text-decoration: none;
   color: #1f2937;
+}
+
+.link :hover{
+  color: #97e1f8;
+   -webkit-text-stroke: 1px #acccf8;
+    stroke:  #cfe3ff; 
+  transition: all 0.3s ease;
+}
+
+.link .Home{
+  text-decoration: none;
+ margin-right: 80px;
+}
+.link .Blog{
+  text-decoration: none;
+  margin-right: 90px ;
+}
+.link .Services {
+   text-decoration: none;
+  margin-right: 100px ;
+   scroll-behavior: smooth;
+}
+.link .AboutUs{
+  text-decoration: none;
+   margin-right: 110px;
+}
+
+.Login{
+  color: #6d9cde;
+  border: none;
+  background-color: transparent;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.Login:hover{
+  color: #97e1f8;
+  -webkit-text-stroke: 0.5px #acccf8;
+  transition: color 0.15s ease, -webkit-text-stroke 0.15s ease;
+}
+
+.Register{
+  margin-left: 10px;
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+.Register:hover{
+  background: #1e40af;
+  color: #f3f9fb;
+  -webkit-text-stroke: 0 #acccf8;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.Dashboard{
+   margin-right: 15px;
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(92, 91, 91);
+  background-color: transparent;
+  cursor: pointer;
+}
+.Logout{
+color: #e36464;
+border: none;
+background-color: transparent;
+cursor: pointer;
+transition: 0.3s ease;
+}
+  .Logout:hover{
+   color: #f41515;
+   -webkit-text-stroke: #9b2f3e;
+  
+  }
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .Stethoscope {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .li {
+    margin: 6px 0;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .li {
+    margin: 6px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar {
+    max-width: 1400px;
+    margin: auto;
+  }
 }

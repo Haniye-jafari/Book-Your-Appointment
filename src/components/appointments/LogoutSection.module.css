@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.logoutCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.logoutIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+.logoutTitle {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.3rem;
+}
+
+.logoutText {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.primaryButton {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.18);
+}
+
+.secondaryButton {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}

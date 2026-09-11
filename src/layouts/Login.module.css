@@ -7,7 +7,8 @@
 }
 .form {
   width: 100%;
-  height: 50%;
+  height: 80%;
+  padding-top: 150px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@
   margin: 0 auto;
 }
 
-.textRegister{
+.textLogin{
   text-align: center;
   padding: 20px;
   border: 1px solid #ccc;
@@ -25,45 +26,15 @@
   background-color: #fff;
   color: #2563eb;
 }
-.inputRegister{
+
+.inputLogin {
+    width: 360px;
   background-color: #e5e7eb;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  outline: none;
+    outline: none;
   border: none;
-}
-
-.error {
-  color: #ef4444;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.passwordMeter {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.barWrapper {
-  width: 100%;
-  height: 8px;
-  background: #e5e7eb;
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.bar {
-  height: 100%;
-  border-radius: 999px;
-  transition: width 0.2s ease;
-}
-
-.passwordHint {
-  font-size: 0.9rem;
-  color: #4b5563;
-  margin: 0;
 }
 
 .submitButton {
@@ -80,15 +51,4 @@
   color: #f3f9fb;
   -webkit-text-stroke: #acccf8;
   transition: background 0.15s ease, color 0.15s ease;
-}
-.link {
-  text-align: center;
-  color: #2563eb;
-  text-decoration: none;
-}
-.link:hover {
- color: #188df3;
-   -webkit-text-stroke: #acccf8;
-    stroke:  #cfe3ff; 
-  transition: all 0.3s ease;
 }
