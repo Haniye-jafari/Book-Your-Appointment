@@ -1,8 +1,16 @@
 .page {
   min-height: calc(100vh - 80px);
-  padding: 28px 24px 36px;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
-  color: #0f172a;
+  padding: 38px clamp(20px, 5vw, 72px) 56px;
+  color: #202b31;
+  background-image: url('../assets/logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   box-shadow: 0 18px 48px rgba(31, 61, 96, 0.12);
+  border-radius: 16px;
+  color: #172b4d;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
 }
 
 .dashboardCard {

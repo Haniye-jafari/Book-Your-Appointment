@@ -1,6 +1,15 @@
 import styles from "./TimePicker.module.css";
+import { isAppointmentSlotBooked } from "../../utils/appointmentSlots";
 
-function TimePicker({ selectedTime, onSelectTime, selectedDate, visitType }) {
+function TimePicker({
+  selectedTime,
+  onSelectTime,
+  selectedDate,
+  visitType,
+  appointments,
+  availabilityStatus,
+  availabilityError,
+}) {
 
   if (!selectedDate) {
     return (
@@ -19,6 +28,26 @@ function TimePicker({ selectedTime, onSelectTime, selectedDate, visitType }) {
       <div className={styles.timePickerContainer}>
         <h3 className={styles.timePickerTitle}>Select a Time</h3>
         <p className={styles.timeInfo}>The clinic is closed on Sundays.</p>
+      </div>
+    );
+  }
+
+  if (availabilityStatus === "idle" || availabilityStatus === "loading") {
+    return (
+      <div className={styles.timePickerContainer}>
+        <h3 className={styles.timePickerTitle}>Select a Time</h3>
+        <p className={styles.timeInfo}>Loading available times…</p>
+      </div>
+    );
+  }
+
+  if (availabilityStatus !== "succeeded") {
+    return (
+      <div className={styles.timePickerContainer}>
+        <h3 className={styles.timePickerTitle}>Select a Time</h3>
+        <p className={styles.timeInfo} role="alert">
+          {availabilityError || "Unable to load available times. Please try again."}
+        </p>
       </div>
     );
   }
@@ -57,6 +86,8 @@ function TimePicker({ selectedTime, onSelectTime, selectedDate, visitType }) {
         </p>
       )}
 
+      <p className={styles.timeInfo}>Gray times are already reserved for this date.</p>
+
       <div className={styles.timeGrid}>
         {filteredTimes.length === 0 && (
           <p className={styles.timeInfo}>
@@ -64,17 +95,28 @@ function TimePicker({ selectedTime, onSelectTime, selectedDate, visitType }) {
           </p>
         )}
 
-        {filteredTimes.map((time) => (
-          <button
-            key={time}
-            className={`${styles.timeButton} ${
-              selectedTime === time ? styles.selectedTime : ""
-            }`}
-            onClick={() => onSelectTime(time)}
-          >
-            {time}
-          </button>
-        ))}
+        {filteredTimes.map((time) => {
+          const isBooked = isAppointmentSlotBooked(appointments, {
+            date: selectedDate,
+            time,
+          });
+
+          return (
+            <button
+              key={time}
+              type="button"
+              className={`${styles.timeButton} ${
+                isBooked ? styles.bookedTime : ""
+              } ${selectedTime === time ? styles.selectedTime : ""}`}
+              disabled={isBooked}
+              aria-label={isBooked ? `${time}, already booked` : time}
+              title={isBooked ? "Already booked for this date" : undefined}
+              onClick={() => onSelectTime(time)}
+            >
+              {time}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

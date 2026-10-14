@@ -41,6 +41,60 @@
       "time": "10:30 AM",
       "status": "confirmed",
       "id": "xKyQV8muY_I"
+    },
+    {
+      "appointmentInfo": {
+        "date": "2026-09-29",
+        "time": "08:00"
+      },
+      "personalInfo": {
+        "name": "Sample Patient One",
+        "phone": "+1-202-555-0101",
+        "insurance": "DemoCare",
+        "note": "Routine follow-up appointment."
+      },
+      "documents": [],
+      "type": "in-person",
+      "status": "Confirmed",
+      "confirmedAt": "2026-09-28T20:47:37.144Z",
+      "patientUsername": "demo.patient",
+      "id": "w0_kU8l-JYE"
+    },
+    {
+      "appointmentInfo": {
+        "date": "2026-09-05",
+        "time": "09:00"
+      },
+      "personalInfo": {
+        "name": "Sample Patient Two",
+        "phone": "+1-202-555-0102",
+        "insurance": "DemoCare",
+        "note": "General consultation."
+      },
+      "documents": [],
+      "type": "video",
+      "status": "Confirmed",
+      "confirmedAt": "2026-09-28T21:01:52.604Z",
+      "patientUsername": "demo.patient",
+      "id": "WWDBgviYdH4"
+    },
+    {
+      "appointmentInfo": {
+        "date": "2026-10-03",
+        "time": "09:00"
+      },
+      "personalInfo": {
+        "name": "Sample Patient Two",
+        "phone": "+1-202-555-0102",
+        "insurance": "DemoCare",
+        "note": "General consultation."
+      },
+      "documents": [],
+      "type": "video",
+      "status": "Confirmed",
+      "confirmedAt": "2026-09-28T21:03:29.590Z",
+      "patientUsername": "demo.patient",
+      "id": "ecnX5LZzBSE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

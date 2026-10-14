@@ -19,6 +19,8 @@ import Blog from './pages/Blog';
 import LearnMore from './pages/LearnMore';
 import Services from './pages/Services';
 import { getCurrentUser, saveCurrentUser } from './utils/auth';
+import DoctorLogin from './pages/DoctorLogin';
+import DoctorVideoCall from './pages/DoctorVideoCall';
 
 function App() {
   const storedUser = getCurrentUser();
@@ -58,6 +60,11 @@ function App() {
         <Route element={<DashboardLayout />}>
           <Route path="/patient/dashboard" element={<PrivateRoute><PatientDashboard /></PrivateRoute>} />
         </Route>
+          
+        <Route path="/doctor/login"  element={<DoctorLogin/>}/>
+          
+        <Route path="/video-call/:roomName" element={<DoctorVideoCall />} />
+        <Route path="/doctor/video-call/:roomName?" element={<DoctorVideoCall />} />
 
         <Route element={<DoctorLayout />}>
           <Route path="/doctor/dashboard" element={<PrivateRoute><DoctorDashboard /></PrivateRoute>} />

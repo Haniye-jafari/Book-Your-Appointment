@@ -1,0 +1,154 @@
+.page {
+  min-height: calc(100vh - 76px);
+  padding: 42px 24px 70px;
+}
+
+.bookingShell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+ 
+  border-radius: 24px;
+ 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px 42px 30px;
+  background: linear-gradient(115deg, #eff7ff, #fff);
+}
+
+.logo img {
+ display: flex;
+ margin-left: 600px;
+  width: 70px;
+  height: 50px;
+  border-radius: 20px;
+}
+.stepKicker {
+  color: #2563eb;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.header h1,
+.introRow h2 {
+  margin: 8px 0 7px;
+  color: #0f172a;
+}
+
+.header h1 {
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.header p {
+  color: #64748b;
+}
+
+
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 18px 42px;
+  border-top: 1px solid #e0ecfa;
+  border-bottom: 1px solid #e0ecfa;
+  background: #fff;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #94a3b8;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.stepNumber {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  font-size: .76rem;
+}
+
+.stepActive {
+  color: #1d4ed8;
+}
+
+.stepActive .stepNumber {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+
+.content {
+  padding: 32px 42px 42px;
+}
+
+.introRow {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.introRow h2 {
+  font-size: 1.45rem;
+}
+
+.resetButton {
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  text-decoration: underline;
+}
+
+.stage {
+  min-height: 360px;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 20px 12px 40px;
+  }
+
+  .header,
+  .content {
+    padding: 24px 18px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .stepper {
+    padding: 15px 18px;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    font-size: .68rem;
+  }
+
+  .introRow {
+    align-items: start;
+  }
+}

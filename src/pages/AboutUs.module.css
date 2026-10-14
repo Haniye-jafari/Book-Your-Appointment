@@ -1,7 +1,4 @@
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 .page {
   min-height: 100vh;
   padding: 32px 20px 48px;
@@ -58,14 +55,57 @@ img {
   color: #475569;
   margin-bottom: 22px;
 }
-
+.clinic{
+    display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.clinic h2 {
+  margin: 0;
+line-height: 1;
+}
+.clinic img{
+    display: block;
+width: 30px;
+height: 30px;
+object-fit: contain;
+}
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 18px;
 }
-
+.contactHeader{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contactHeader h2{
+  margin: 0;
+line-height: 1;
+}
+.contactHeader img{
+  display: block;
+width: 30px;
+height: 30px;
+object-fit: contain;
+}
+.calender{
+   display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calender h2{
+  margin: 0;
+line-height: 1;
+}
+.calender img{
+    display: block;
+width: 30px;
+height: 30px;
+object-fit: contain;
+}
 .infoBox,
 .hoursBox {
   background: #f8fbff;
@@ -76,6 +116,7 @@ img {
 
 .infoBox h2,
 .hoursBox h2 {
+
   font-size: 18px;
   font-weight: 700;
   color: #0f172a;
@@ -84,8 +125,10 @@ img {
 
 .infoBox p,
 .hoursBox li {
+  
   color: #475569;
   line-height: 1.7;
+  
 }
 
 .hoursBox ul {

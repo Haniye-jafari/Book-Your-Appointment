@@ -38,6 +38,15 @@
   background: #eaf3ff;
 }
 
+.timeButton:disabled,
+.bookedTime {
+  border-color: #d1d5db;
+  background: #e5e7eb;
+  color: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .selectedTime {
   border-color: #60a5fa;
   background: #bfdbfe;

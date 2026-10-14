@@ -1,9 +1,14 @@
 import img from "../assets/Drpicture.png.png";
+import logo from "../assets/logo.png";
 import Styles from "../layouts/Banner.module.css"
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/useAuth";
 
 function Banner() {
+  const { authStatus } = useAuth();
+  const appointmentPath = authStatus === "loggedIn" ? "/appointments" : "/register";
+
   return (
     <div className={Styles.Banner}>
       <img
@@ -12,16 +17,19 @@ function Banner() {
         className={Styles.img}
         
       />
+      <img src={logo} alt="Logo" className={Styles.logo} />
       <div className={Styles.TypewriterWrapper}>
         <Typewriter
           words={[
             "Trusted Medical Care with Modern Technology and Compassionate Specialists",
             "Your Health Deserves Exceptional Care from Experienced Medical Professionals",
             "Book Your Appointment Online in Just a Few Simple Clicks",
+            "Save time by booking a video call.",
             "24/7 Emergency Support Whenever You and Your Family Need Us Most",
             "Delivering Excellence in Every Patient Experience with Personalized Treatment",
             "Helping You and Your Family Live Healthier Lives with Confidence",
-            "Modern Healthcare Solutions Designed Around Your Comfort and Well-Being"
+            "Modern Healthcare Solutions Designed Around Your Comfort and Well-Being",
+            "Make a video call on Saturday between 9 a.m. and 1 p.m."
           ]}
           loop
           cursor
@@ -32,9 +40,9 @@ function Banner() {
         />
       </div>
       <div className={Styles.Appointment}>
-        <a href="/appointments">
+        <Link to={appointmentPath}>
           <p>Book Your Appointment</p>
-        </a>
+        </Link>
       </div>
           
      <div>

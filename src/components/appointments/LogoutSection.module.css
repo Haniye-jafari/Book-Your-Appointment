@@ -1,4 +1,6 @@
 .container {
+
+  height: 600px;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -63,12 +65,3 @@
   box-shadow: 0 12px 22px rgba(37, 99, 235, 0.18);
 }
 
-.secondaryButton {
-  background: #e2e8f0;
-  color: #0f172a;
-}
-
-.primaryButton:hover,
-.secondaryButton:hover {
-  transform: translateY(-1px);
-}

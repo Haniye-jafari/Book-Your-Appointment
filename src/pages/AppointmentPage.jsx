@@ -1,8 +1,8 @@
-
+import OnlineAppointment from '../components/appointments/OnlineAppointment';
 
 function AppointmentPage() {
   return (
-    <div>AppointmentPage</div>
+    <OnlineAppointment />
   )
 }
 

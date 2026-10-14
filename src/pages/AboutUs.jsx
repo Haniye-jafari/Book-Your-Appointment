@@ -1,5 +1,8 @@
 import styles from './AboutUs.module.css';
 import MedicalTeam from "../assets/MedicalTeam.png"
+import phone from "../components/icons/phone.svg"
+import calender from "../components/icons/calender.svg"
+import hospital from "../components/icons/hospital.svg"
 function AboutUs() {
   return (
     <div className={styles.page}>
@@ -19,20 +22,33 @@ function AboutUs() {
           </p>
 
           <div className={styles.infoGrid}>
+
             <div className={styles.infoBox}>
-              <h2>Clinic Address</h2>
+              <div className={styles.clinic}>
+                  <img src={hospital} alt="hospital" />
+              <h2>Clinic Address</h2> 
+              </div>
+           
               <p>12 Greenfield Road, London, United Kingdom</p>
             </div>
 
             <div className={styles.infoBox}>
-              <h2>Contact</h2>
+              <div className={styles.contactHeader}>
+                 <img src={phone} alt="phone" />
+                 <h2 >Contact</h2>
+              </div>
               <p>Phone: +44 20 5555 0142</p>
             </div>
           </div>
 
           <div className={styles.hoursBox}>
-            <h2>Clinic Hours</h2>
-            <ul>
+            <div className={styles.calender}>
+            <img src={calender} alt="calender" />
+              <h2>Clinic Hours</h2>
+             
+            </div>
+            
+             <ul>
               <li>Monday to Friday: 8:00 AM - 6:00 PM</li>
               <li>Saturday: 9:00 AM - 1:00 PM</li>
               <li>Sunday: Closed</li>

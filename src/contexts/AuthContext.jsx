@@ -1,4 +1,4 @@
-﻿import { createContext, useContext } from 'react';
+﻿import { createContext } from 'react';
 
 const AuthContext = createContext({
   authStatus: 'guest',
@@ -6,9 +6,5 @@ const AuthContext = createContext({
   login: () => {},
   logout: () => {},
 });
-
-export function useAuth() {
-  return useContext(AuthContext);
-}
 
 export default AuthContext;

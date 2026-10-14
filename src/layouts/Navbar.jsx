@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import StethoscopeIcon from '../components/icons/StethoscopeIcon';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../contexts/useAuth';
 import styles from '../layouts/navbar.module.css';
 
 function Navbar() {
@@ -15,7 +15,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className={styles.navbar}>
+      <button type="button" onClick={() => navigate('/doctor/login')} className={styles.stethbutton}>
         <StethoscopeIcon className={styles.Stethoscope} />
+      </button>
+        
         <div className={styles.link}>
           <li className={styles.li}>
           <NavLink to="/" className={styles.Home}>Home</NavLink>
